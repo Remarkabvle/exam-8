@@ -153,9 +153,6 @@
   border: 1px solid black;
   border-radius: 50%;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
 }
 .details__top__right .details__buttons .single__wishlist-btn .details {
   display: flex;

@@ -1,28 +1,23 @@
 import { Shop } from "@mui/icons-material";
-import React, { lazy } from "react";
+import React from "react";
 import { Route, Routes } from "react-router-dom";
 
+import Checkout from "./pages/checkout/Checkout";
+import ShopF from "./pages/shop/Shop";
+import Home from "./pages/home/Home";
+import Cart from "./pages/cart/Cart";
+import Details from "./pages/details/Detail";
+import Wishlist from "./pages/wishlist/Wishlist";
+import ProductCreate from "./pages/productCreate/ProductsCreate";
+import ProductManage from "./pages/productManage/ProductManage";
+import CategoryCreate from "./pages/categoryCreate/CategoryCreate";
+import CategoryManage from "./pages/categoryManage/CategoryManage";
+import Login from "./pages/login/Login";
+import Auth from "./pages/auth/Auth";
+import Admin from "./pages/admin/Admin";
+import Layout from "./components/layout/Layout";
 
-let Checkout = lazy(() => import("./pages/checkout/Checkout"));
-let ShopF = lazy(() => import("./pages/shop/Shop"));
-let Home = lazy(() => import("./pages/home/Home"));
-let Cart = lazy(() => import("./pages/cart/Cart"));
-let Details = lazy(() => import("./pages/details/Detail"));
-let Wishlist = lazy(() => import("./pages/wishlist/Wishlist"));
-let ProductCreate = lazy(() => import("./pages/productCreate/ProductsCreate"));
-let ProductManage = lazy(() => import("./pages/productManage/ProductManage"));
-let CategoryCreate = lazy(() =>
-  import("./pages/categoryCreate/CategoryCreate")
-);
-let CategoryManage = lazy(() =>
-  import("./pages/categoryManage/CategoryManage")
-);
-let Login = lazy(() => import("./pages/login/Login"));
-let Auth = lazy(() => import("./pages/auth/Auth"));
-let Admin = lazy(() => import("./pages/admin/Admin"));
-let Layout = lazy(() => import("./components/layout/Layout"));
-
-import { ToastContainer, toast } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const App = () => {
@@ -34,12 +29,8 @@ const App = () => {
           <Route path="/cart" element={<Cart />} />
           <Route path="/product/:id" element={<Details />} />
           <Route path="/wishlist" element={<Wishlist />} />
-          <Route path="/wishlist" element={<Wishlist />} />
-          <Route path="/shop" element={<ShopF/>} />
-
-
+          <Route path="/shop" element={<ShopF />} />
           <Route path="/checkout" element={<Checkout />} />
-          
         </Route>
         <Route path="/login" element={<Login />} />
         <Route path="/" element={<Auth />}>
