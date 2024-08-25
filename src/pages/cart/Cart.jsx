@@ -21,7 +21,7 @@ import {
   Paper,
   Divider,
 } from "@mui/material";
-import "./Cart.scss"; // Import the SCSS file
+import "./cart.scss"; // Import the SCSS file
 
 const Cart = () => {
   const navigate = useNavigate();
