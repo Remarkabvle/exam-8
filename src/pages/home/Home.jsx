@@ -22,7 +22,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import Hero from "../../components/hero/Hero.jsx";
-import HappyCustomers from "../../components/HappyCustomers/HappyCustomers.JSX";
+import HappyCustomers from "../../components/HappyCustomers/HappyCustomers.jsx";
 
 const HomeRefactored = () => {
   const { data: commentsData } = useGetCommentsQuery();
