@@ -1,0 +1,29 @@
+.empty-container {
+  text-align: center;
+  padding: 50px 20px;
+}
+.empty-container svg {
+  margin-bottom: 20px;
+}
+.empty-container img {
+  max-width: 200px;
+  margin-bottom: 20px;
+}
+.empty-container p {
+  font-size: 18px;
+  color: #777;
+  margin-bottom: 20px;
+}
+.empty-container .start-shopping-btn {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.empty-container .start-shopping-btn:hover {
+  background-color: #0056b3;
+}
+/*# sourceMappingURL=empty.css.map */

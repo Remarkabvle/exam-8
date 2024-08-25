@@ -1,0 +1,233 @@
+.top-bar {
+  background-color: #000;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+  font-size: 14px;
+  position: relative;
+
+  a {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: underline;
+    margin-left: 5px;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  .top-bar__close {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+
+header {
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px 0;
+  height: 80px;
+
+  &.scrolled {
+    // position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    padding: 15px 0;
+    width: 100%;
+  }
+
+  .custom-header {
+    .custom-header__navigation {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .menu-icon {
+        display: none;
+        font-size: 24px;
+        cursor: pointer;
+      }
+
+      .custom-navigation__list {
+        display: flex;
+
+        a {
+          text-decoration: none;
+          color: #000;
+          font-weight: 500;
+          padding: 10px 15px;
+
+          &:hover {
+            color: #888;
+          }
+        }
+      }
+
+      .search-input {
+        position: relative;
+        flex-grow: 1;
+        margin: 0 20px;
+
+        .search-icon {
+          position: absolute;
+          top: 50%;
+          left: 10px;
+          transform: translateY(-50%);
+          font-size: 18px;
+          color: #666;
+        }
+
+        input {
+          width: 100%;
+          padding: 10px 15px 10px 40px;
+          border-radius: 20px;
+          background-color: #f5f5f5;
+          border: none;
+          font-size: 14px;
+
+          &:focus {
+            outline: none;
+            border-color: #000;
+          }
+        }
+      }
+
+      .icon-links {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+
+        a {
+          position: relative;
+          color: #000;
+          font-size: 22px;
+
+          &:hover {
+            color: #888;
+          }
+
+          sup {
+            position: absolute;
+            top: -5px;
+            right: -10px;
+            background-color: #000;
+            color: #fff;
+            border-radius: 50%;
+            font-size: 10px;
+            padding: 3px 5px;
+          }
+        }
+      }
+    }
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+  }
+}
+
+// Responsive Styles
+@media (max-width: 1015px) {
+  header {
+    padding: 10px 0;
+    height: auto;
+
+    .custom-header {
+      .custom-header__navigation {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        gap: 40px;
+
+        .menu-icon {
+          display: block;
+        }
+
+        .custom-navigation__list {
+          display: flex;
+          flex-direction: column;
+          position: fixed;
+          top: 0;
+          right: -100%;
+          width: 250px;
+          height: 100%;
+          background-color: #fff;
+          padding-top: 80px;
+          transition: right 0.3s ease-in-out;
+          z-index: 999;
+
+          &.visible {
+            right: 0;
+          }
+
+          a {
+            padding: 10px 20px;
+            border-bottom: 1px solid #eee;
+          }
+        }
+
+        .search-input {
+          width: 100%;
+          margin: 10px 0;
+
+          input {
+            width: calc(100% - 40px);
+            padding: 10px 15px 10px 40px;
+          }
+        }
+
+        .icon-links {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+// Icons fixed at bottom
+@media (max-width: 768px) {
+  .fixed-icons {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    z-index: 1000;
+
+    .icon-links {
+      display: flex;
+      gap: 15px;
+      font-size: 22px;
+    }
+  }
+}
+
+@media(min-width:768px){
+  .fixed-icons{
+    display: none !important;;
+  }
+}

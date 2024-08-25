@@ -1,0 +1,65 @@
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.loading-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.loading-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  padding: 16px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.skeleton {
+  background-color: #e0e0e0;
+  border-radius: 4px;
+  -webkit-animation: shimmer 1.5s infinite linear;
+          animation: shimmer 1.5s infinite linear;
+  background: linear-gradient(to right, #e0e0e0 8%, #f0f0f0 18%, #e0e0e0 33%);
+  background-size: 1000px 104px;
+}
+
+.loading-img {
+  height: 150px;
+  width: 100%;
+}
+
+.loading-title {
+  height: 20px;
+  width: 70%;
+}
+
+.loading-price {
+  height: 24px;
+  width: 50%;
+}
+
+@-webkit-keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+/*# sourceMappingURL=Loading.css.map */

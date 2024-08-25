@@ -1,0 +1,136 @@
+.cart-container {
+  padding: 20px;
+  color: #000;
+  margin-bottom: 40px;
+
+  .cart-title {
+    font-weight: 700;
+    margin-bottom: 20px;
+    font-size: 32px;
+    color: #000;
+  }
+
+  .cart-item {
+    display: flex;
+    margin-bottom: 15px;
+    // background-color: #f9f9f9;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 10px 15px;
+    align-items: center;
+    justify-content: space-between;
+
+    .cart-item-media {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .cart-item-details {
+      flex: 1;
+      margin-left: 15px;
+
+      .cart-item-title {
+        font-weight: 600;
+        font-size: 18px;
+        color: #000;
+        text-decoration: none;
+      }
+
+      .cart-item-info {
+        color: #888;
+        margin: 5px 0;
+        font-size: 14px;
+      }
+
+      .cart-item-price {
+        font-weight: 700;
+        font-size: 20px;
+      }
+    }
+
+    .amount-controls {
+      display: flex;
+      align-items: center;
+      background-color: #e0e0e0;
+      border-radius: 30px;
+      padding: 5px;
+
+      button {
+        min-width: 40px;
+        background: none;
+        border: none;
+        font-size: 18px;
+        font-weight: 700;
+        color: #000;
+        cursor: pointer;
+      }
+
+      .amount {
+        margin: 0 10px;
+        font-size: 16px;
+      }
+    }
+
+    .remove-button {
+      color: #000000;
+    }
+  }
+
+  .order-summary {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    margin-bottom: 40px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+
+    .summary-title {
+      font-weight: 600;
+      margin-bottom: 20px;
+      font-size: 20px;
+    }
+
+    .summary-item {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+      font-size: 16px;
+
+      &.discount {
+        color: #f44336;
+      }
+
+      &.total {
+        font-weight: 700;
+        font-size: 20px;
+      }
+    }
+
+    .promo-code {
+      margin-bottom: 20px;
+      background-color: #f4f4f4;
+      border-radius: 30px;
+
+      .MuiInputBase-root {
+        border-radius: 30px;
+        padding-left: 15px;
+      }
+    }
+
+    .checkout-button {
+      background-color: #000;
+      margin-top: 10px;
+      color: #fff;
+      padding: 12px 20px;
+      border-radius: 30px;
+      font-size: 16px;
+      font-weight: 600;
+
+      &.apply-button {
+        background-color: #000;
+        margin-top: 10px;
+      }
+    }
+  }
+}

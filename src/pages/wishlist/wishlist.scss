@@ -1,0 +1,124 @@
+.favorite-list-wrapper {
+  padding: 20px;
+
+  .item-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+  }
+
+  .item-card {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .card-top {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+
+      .qty-controls {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+
+        .qty-btn {
+          background-color: #f0eeed;
+          border: none;
+          padding: 5px 10px;
+          border-radius: 4px;
+          cursor: pointer;
+        }
+
+        .qty-value {
+          font-weight: 600;
+        }
+      }
+
+      .add-cart-btn,
+      .fav-btn {
+        background-color: #f0eeed;
+        border: none;
+        padding: 5px;
+        border-radius: 50%;
+        cursor: pointer;
+
+        svg {
+          font-size: 20px;
+        }
+      }
+
+      .fav-btn.active {
+        color: black;
+      }
+    }
+
+    .item-image {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .item-details {
+      padding: 15px;
+
+      .item-title {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .price-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .pricing {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+
+          .current-cost {
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+          }
+
+          .old-cost {
+            font-size: 16px;
+            color: #999;
+            text-decoration: line-through;
+          }
+
+          .discount-tag {
+            font-size: 14px;
+            color: #ff5733;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+
+  .load-more-action {
+    display: block;
+    margin: 20px auto;
+    padding: 15px 60px;
+    font-size: 16px;
+    background-color: white;
+    border-radius: 62px;
+    cursor: pointer;
+  }
+}

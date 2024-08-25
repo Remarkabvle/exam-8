@@ -1,0 +1,146 @@
+.admin {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  transition: 0.3s;
+}
+.admin__header {
+  display: flex;
+  padding: 20px;
+  justify-content: space-between;
+}
+.admin__header__btn {
+  background: transparent;
+  border: none;
+  font-size: 32px;
+  cursor: pointer;
+}
+
+.admin.close {
+  grid-template-columns: 74px 1fr;
+}
+.admin.close .sidebar__logo,
+.admin.close .sidebar__link {
+  padding: 10px;
+  gap: 24px;
+}
+
+@media (max-width: 1050px) {
+  .admin {
+    grid-template-columns: 74px 1fr;
+  }
+  .admin .sidebar__logo,
+.admin .sidebar__link {
+    padding: 10px;
+    gap: 24px;
+  }
+}
+.select {
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+
+.product-create {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.product-create .form {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 500px;
+}
+.product-create .form .form-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.product-create .form .form-group .form-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #4a5568;
+}
+.product-create .form .form-group .form-input {
+  margin-top: 4px;
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+  background: #f8f8f8;
+  min-height: 50px;
+  font-size: 18px;
+  width: 100%;
+}
+.product-create .form .form-button {
+  margin-top: 16px;
+  padding: 8px;
+  background-color: black;
+  color: white;
+  border-radius: 4px;
+  border: 1px solid black;
+  max-width: 150px;
+}
+
+.category-create {
+  max-width: 500px;
+}
+.category-create .form-title {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.category-create .form {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.category-create .form .form-group {
+  display: flex;
+  flex-direction: column;
+}
+.category-create .form .form-group .form-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #4a5568;
+}
+.category-create .form .form-group .form-input {
+  margin-top: 4px;
+  padding: 8px;
+  border: none;
+  background: #f8f8f8;
+  border-radius: 4px;
+  min-height: 50px;
+  font-size: 18px;
+  outline: none;
+}
+.category-create .form .form-button {
+  margin-top: 16px;
+  padding: 8px;
+  background-color: black;
+  border: 1px solid black;
+  color: white;
+  border-radius: 4px;
+}
+
+.product-manage {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding: 20px;
+}
+.product-manage .load__more-btn {
+  padding: 10px 20px;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin: 0 auto;
+}
+.product-manage .filter .filter-select {
+  padding: 10px;
+  outline: none;
+}
+/*# sourceMappingURL=admin.css.map */

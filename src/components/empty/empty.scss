@@ -1,0 +1,33 @@
+.empty-container {
+  text-align: center;
+  padding: 50px 20px;
+
+  svg {
+    margin-bottom: 20px;
+  }
+
+  img {
+    max-width: 200px;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 18px;
+    color: #777;
+    margin-bottom: 20px;
+  }
+
+  .start-shopping-btn {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: #0056b3;
+    }
+  }
+}
