@@ -1,102 +1,103 @@
-.favorite-list-wrapper {
+.wishlist-container {
   padding: 20px;
 }
-.favorite-list-wrapper .item-grid {
+.wishlist-container .wishlist-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 20px;
 }
-.favorite-list-wrapper .item-card {
+.wishlist-container .wishlist-card {
   background-color: #fff;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
-.favorite-list-wrapper .item-card:hover {
+.wishlist-container .wishlist-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
 }
-.favorite-list-wrapper .item-card .card-top {
+.wishlist-container .wishlist-card .card-header {
+  position: relative;
   display: flex;
   justify-content: space-between;
   padding: 10px;
 }
-.favorite-list-wrapper .item-card .card-top .qty-controls {
+.wishlist-container .wishlist-card .card-header .quantity-controls {
   display: flex;
   align-items: center;
   gap: 5px;
 }
-.favorite-list-wrapper .item-card .card-top .qty-controls .qty-btn {
+.wishlist-container .wishlist-card .card-header .quantity-controls .quantity-btn {
   background-color: #f0eeed;
   border: none;
   padding: 5px 10px;
   border-radius: 4px;
   cursor: pointer;
 }
-.favorite-list-wrapper .item-card .card-top .qty-controls .qty-value {
+.wishlist-container .wishlist-card .card-header .quantity-controls .item-quantity {
   font-weight: 600;
 }
-.favorite-list-wrapper .item-card .card-top .add-cart-btn,
-.favorite-list-wrapper .item-card .card-top .fav-btn {
+.wishlist-container .wishlist-card .card-header .add-to-cart-btn,
+.wishlist-container .wishlist-card .card-header .wishlist-btn {
   background-color: #f0eeed;
   border: none;
   padding: 5px;
   border-radius: 50%;
   cursor: pointer;
+  transition: background-color 0.3s;
 }
-.favorite-list-wrapper .item-card .card-top .add-cart-btn svg,
-.favorite-list-wrapper .item-card .card-top .fav-btn svg {
+.wishlist-container .wishlist-card .card-header .add-to-cart-btn svg,
+.wishlist-container .wishlist-card .card-header .wishlist-btn svg {
   font-size: 20px;
 }
-.favorite-list-wrapper .item-card .card-top .fav-btn.active {
+.wishlist-container .wishlist-card .card-header .wishlist-btn.active-heart {
   color: black;
 }
-.favorite-list-wrapper .item-card .item-image {
+.wishlist-container .wishlist-card .wishlist-image {
   width: 100%;
   height: 250px;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.favorite-list-wrapper .item-card .item-details {
+.wishlist-container .wishlist-card .wishlist-details {
   padding: 15px;
 }
-.favorite-list-wrapper .item-card .item-details .item-title {
+.wishlist-container .wishlist-card .wishlist-details .wishlist-title {
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 10px;
-  display: -webkit-box;
+  line-clamp: 2;
   -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.favorite-list-wrapper .item-card .item-details .price-info {
+.wishlist-container .wishlist-card .wishlist-details .price-section {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.favorite-list-wrapper .item-card .item-details .price-info .pricing {
+.wishlist-container .wishlist-card .wishlist-details .price-section .price-info {
   display: flex;
   align-items: center;
   gap: 10px;
 }
-.favorite-list-wrapper .item-card .item-details .price-info .pricing .current-cost {
+.wishlist-container .wishlist-card .wishlist-details .price-section .price-info .current-price {
   font-size: 20px;
   font-weight: bold;
   color: #333;
 }
-.favorite-list-wrapper .item-card .item-details .price-info .pricing .old-cost {
+.wishlist-container .wishlist-card .wishlist-details .price-section .price-info .old-price {
   font-size: 16px;
   color: #999;
   text-decoration: line-through;
 }
-.favorite-list-wrapper .item-card .item-details .price-info .pricing .discount-tag {
+.wishlist-container .wishlist-card .wishlist-details .price-section .price-info .discount-percentage {
   font-size: 14px;
   color: #ff5733;
   font-weight: 600;
 }
-.favorite-list-wrapper .load-more-action {
+.wishlist-container .load-more-btn {
   display: block;
   margin: 20px auto;
   padding: 15px 60px;
